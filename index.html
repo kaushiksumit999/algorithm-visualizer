@@ -28,6 +28,44 @@
       left: 14px;
       font-size: 12px;
     }
+
+    .slidecontainer {
+      width: 100%;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 40%;
+      height: 10px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    .slider:hover {
+      opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -43,18 +81,23 @@
       </div>
     </div>
     <div class="row p-4">
-      <div class="col-6">
+      <div class="col-3">
         <label>*Data Set Size</label>
         <div class="input-group mb-2">
           <input type="number" class="form-control" placeholder="Data Set Size (Max 40)" aria-label="Data Set Size"
             id="dataSet" />
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-3">
         <label>Number to Search</label>
         <div class="input-group mb-2">
           <input type="number" class="form-control" placeholder="Number to search" aria-label="Number to search"
             id="search" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="slidecontainer">
+          Zero<input type="range" min="1" max="100" value="50" class="slider" id="myRange">Max
         </div>
       </div>
     </div>
