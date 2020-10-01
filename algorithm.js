@@ -4,9 +4,7 @@ const searchInputRef = document.getElementById("search");
 const activeAlgorithmRef = document.getElementById("activeAlgorithm");
 const activeAlgorithmResultRef = document.getElementById("activeAlgorithmResult");
 const resultRef = document.getElementById("result");
-const slider = document.getElementById("speedRange");
 let dataSetArray = [];
-var speed = 1;
 
 function resetData(length) {
   dataSetArray = [];
@@ -18,10 +16,6 @@ function resetData(length) {
 
 function getRandomInt() {
   return Math.floor(Math.random() * 100) + 1;
-}
-
-slider.oninput = function () {
-  this.speed = this.value;
 }
 
 function linearSearch() {
