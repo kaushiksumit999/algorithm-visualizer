@@ -6,6 +6,7 @@ const activeAlgorithmResultRef = document.getElementById("activeAlgorithmResult"
 const resultRef = document.getElementById("result");
 const slider = document.getElementById("speedRange");
 let dataSetArray = [];
+var speed = 1;
 
 function resetData(length) {
   dataSetArray = [];
@@ -20,7 +21,7 @@ function getRandomInt() {
 }
 
 slider.oninput = function () {
-  output.innerHTML = this.value;
+  this.speed = this.value;
 }
 
 function linearSearch() {
